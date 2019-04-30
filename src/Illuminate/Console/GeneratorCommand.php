@@ -158,9 +158,7 @@ abstract class GeneratorCommand extends Command
     protected function buildClass($name)
     {
         $stub = $this->files->get($this->getStub());
-        return $this->error($this->replaceNamespace($stub, $name)->replaceClass($stub, $name));
         return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
-//        $this->type === 'Model' ? $rootNamespace : $rootNamespace
     }
 
     /**
